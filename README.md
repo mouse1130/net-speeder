@@ -22,7 +22,7 @@ A program to speed up single thread download upon long delay and unstable networ
 
 1：下载源码并解压
 
-    wget https://github.com/snooda/net-speeder/archive/master.zip
+    wget https://github.com/mouse1130/net-speeder/archive/master.zip
     unzip master.zip
 
 2：准备编译环境
@@ -30,19 +30,25 @@ A program to speed up single thread download upon long delay and unstable networ
 debian/ubuntu：
 
     #安装libnet-dev：
+    apt-get -y update && apt-get -y install --no-install-recommends gettext curl wget vim unzip psmisc gcc swig autoconf automake make perl cpio build-essential libtool openssl libssl-dev zlib1g-dev xmlto asciidoc libpcre3 libpcre3-dev python python-dev python-pip python-m2crypto libev-dev libc-ares-dev libudns-dev
+    
     apt-get install libnet1-dev
     #安装libpcap-dev：
     apt-get install libpcap0.8-dev 
 
 centos： 
-
+     yum install -y epel-release
+     yum install -y unzip openssl-devel gcc swig autoconf libtool libevent vim automake make psmisc curl curl-devel zlib-devel perl perl-devel cpio expat-devel gettext-devel xmlto asciidoc pcre pcre-devel python python-devel python-setuptools udns-devel libev-devel c-ares-devel mbedtls-devel
+     
     #下载epel：https://fedoraproject.org/wiki/EPEL/zh-cn 例：CentOS6 64位：
     wget http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm
     #（如果是centos5，则在epel/5/下）
     #安装epel：
     rpm -ivh epel-release-6-8.noarch.rpm
+    
+    
     #然后即可使用yum安装：
-    yum install libnet libpcap libnet-devel libpcap-devel
+    yum install libnet libpcap libnet-devel libpcap-devel unzip ethtool
 
 编译：
 
