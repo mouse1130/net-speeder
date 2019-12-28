@@ -37,8 +37,10 @@ debian/ubuntu：
     apt-get install libpcap0.8-dev 
 
 centos： 
-     yum install -y epel-release
-     yum install -y unzip openssl-devel gcc swig autoconf libtool libevent vim automake make psmisc curl curl-devel zlib-devel perl perl-devel cpio expat-devel gettext-devel xmlto asciidoc pcre pcre-devel python python-devel python-setuptools udns-devel libev-devel c-ares-devel mbedtls-devel
+
+    #安装编译环境：
+    yum install -y epel-release
+    yum install -y unzip openssl-devel gcc swig autoconf libtool libevent vim automake make psmisc curl curl-devel zlib-devel perl perl-devel cpio expat-devel gettext-devel xmlto asciidoc pcre pcre-devel python python-devel python-setuptools udns-devel libev-devel c-ares-devel mbedtls-devel
      
     #下载epel：https://fedoraproject.org/wiki/EPEL/zh-cn 例：CentOS6 64位：
     wget http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm
